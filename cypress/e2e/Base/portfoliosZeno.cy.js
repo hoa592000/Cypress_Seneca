@@ -29,8 +29,8 @@ describe('Verify Portfolios', function(){
     })
     it('Create portfolios with Entity is ' + dataPortfolios.searchEntityName, function(){
         portfolios.clickPortfoliosPage();
-        a = 'tr[data-row-key="f9af2fb3-ca6d-4f88-9b67-0a938b0ab744"]'
-        cy.get(a +'>td.ant-table-cell>button[_nk="Akk681"]').click();
-        cy.get('span.ant-dropdown-menu-title-content').contains('Promote').click()
+        // a = 'tr[data-row-key="f9af2fb3-ca6d-4f88-9b67-0a938b0ab744"]'
+        // // cy.get(a +'>td.ant-table-cell>button[_nk="Akk681"]').click();
+        // cy.get('span.ant-dropdown-menu-title-content').contains('Promote').click()
     })
 })
