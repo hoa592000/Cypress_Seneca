@@ -3,6 +3,7 @@ import dataFramework from "../../fixtures/frameworkZeno.json"
 import framework from "../../pages/frameworkZeno"
 import dataUserZenoData from "../../fixtures/userZeno.json"
 
+
 describe('Verify framework', function(){
  
     beforeEach(()=> {
@@ -25,7 +26,6 @@ describe('Verify framework', function(){
     // Edit create framework
         framework.clickEditButton();
         framework.inputNameFramework(dataFramework.nameFrameworkCreate);
-
         framework.clickAddQuestion();
         framework.clickCustonQuestion();
         framework.inputCode(dataFramework.code);
@@ -36,7 +36,6 @@ describe('Verify framework', function(){
         framework.inputPolarity();
         framework.inputQuestion(dataFramework.inputQuestion);
         framework.clickConfirm();
-
         framework.clickNextButton();
         framework.clickNextButton();
         framework.clickNextButton();
@@ -57,16 +56,10 @@ describe('Verify framework', function(){
         framework.clickSearchButton(dataFramework.searchFramework)
         framework.clickSearch()
         framework.selectedQuestionSupplyChainMgmt()
-        
         framework.clickNextButton();
         framework.clickNextButton();
         framework.clickNextButton(); 
         })
-
-        it('Delete framework', function(){
-            framework.clickFrameworkPage();
-            cy.get('span[_nk="Akk691"][class="anticon anticon-more"]').contains('11 Framework').click()
-    })
 })
    
     

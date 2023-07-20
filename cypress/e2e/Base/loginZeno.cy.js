@@ -13,7 +13,6 @@ describe('Verify function login', function(){
        login.fillUsername(dataUserZenoData.username);
        login.fillPassword(dataUserZenoData.password);
        login.submit();
-
     // verify team and selected Team
        login.clickTeam(dataUserZenoData.TeamZeno)
        login.clickOpen();
@@ -23,7 +22,6 @@ describe('Verify function login', function(){
         login.fillUsername(dataUserZenoData.username);
         login.fillPassword(dataUserZenoData.password);
         login.submit();
-    
     // verify team and selected Team
         login.clickTeam(dataUserZenoData.TeamAceCapital)
         login.clickOpen();

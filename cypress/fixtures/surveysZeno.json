@@ -1,3 +1,14 @@
 {
-    "nameSurvey": "Portfolio TestAuto01"
+    "SurveyFrameworkClone": "Framework Clone AutoTest 01",
+    "SurveyFrameworkCreate": "Framework Create AutoTest 01",
+    "SurveyFrameworkPreset": "Framework Preset AutoTest 01",
+
+    "folderTeamFramework": "Team Frameworks",
+    "folderMyFramework": "My Frameworks",
+    "folderPresetFramework": "Preset Frameworks",
+    "FrameworkRevelioLabs": "RevelioLabs [May 2021]",
+    "folderTeamPortfolio": "Team Portfolios",
+    "folderMyPortfolio": "My Portfolios",
+    "folderPresetPortfolio": "Preset Portfolios",
+    "namePortfolio": ""
 }

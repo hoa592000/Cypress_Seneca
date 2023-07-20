@@ -34,18 +34,26 @@ class Portfolios{
     }
     selectedEntity(){
         cy.get(portfoliosLocator.selectedEntity).click();
+        cy.wait(1000);
     }
     clickAddToPortfolios(){
         cy.get(portfoliosLocator.buttonAddToPortfolios).click();
+        cy.wait(1000);
     }
     clickNextButton(){
         cy.get(portfoliosLocator.buttonNext).click();
+        cy.wait(1000);
     }
     clickResetAvg(){
         cy.get(portfoliosLocator.buttonResetAvg).click();
+        cy.wait(1000);
     }
     clickConfirm(){
         cy.get(portfoliosLocator.buttonConfirm).click();
+        cy.wait(1000);
+    }
+    clickEditPortfolio(){
+        cy.get(portfoliosLocator.buttonEdit).click();
     }
 }
 const portfolios = new Portfolios();

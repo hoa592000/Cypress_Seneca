@@ -8,12 +8,11 @@ describe('Verify Portfolios', function(){
        cy.visit('/');  
        login.fillUsername(dataUserZenoData.username);
        login.fillPassword(dataUserZenoData.password);
-       login.submit();
-       
+       login.submit();    
        login.clickTeam(dataUserZenoData.TeamZeno);
        login.clickOpen();
     })
-    it('Create portfolios', function(){
+    it('Create portfolios with Entity is ' + dataPortfolios.searchEntityName, function(){
         portfolios.clickPortfoliosPage();
         portfolios.clickIconNew();
         portfolios.selectedCreatePortfolio();
@@ -27,5 +26,11 @@ describe('Verify Portfolios', function(){
         portfolios.clickConfirm();
         portfolios.clickPortfoliosPage();
 
+    })
+    it('Create portfolios with Entity is ' + dataPortfolios.searchEntityName, function(){
+        portfolios.clickPortfoliosPage();
+        a = 'tr[data-row-key="f9af2fb3-ca6d-4f88-9b67-0a938b0ab744"]'
+        cy.get(a +'>td.ant-table-cell>button[_nk="Akk681"]').click();
+        cy.get('span.ant-dropdown-menu-title-content').contains('Promote').click()
     })
 })

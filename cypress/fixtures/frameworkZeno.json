@@ -1,6 +1,6 @@
 {
-    "nameFrameworkCreate": "Framework Create TestAuto01",
-    "nameFrameworkClone": "Framework Clone TestAuto01",
+    "nameFrameworkCreate": "Framework Create AutoTest 01",
+    "nameFrameworkClone": "Framework Clone AutoTest 01",
     "code": "01",
     "inputIndicator": "01",
     "inputQuestion": "Test Questtion",
