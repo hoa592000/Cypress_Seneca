@@ -1,7 +1,7 @@
 import surveysLocator from "./locator/surveysLocatorZeno";
 import dataSurveys from "../fixtures/surveysZeno.json"
 import dataFramework from "../fixtures/frameworkZeno.json";
-import dataPortfolios from "../fixtures/portfoliosZeno.json"
+import dataPortfolios from "../fixtures/portfoliosZeno.json";
 class Surveys{
     clickSurveysPage(){
         cy.get(surveysLocator.iconSurveys).click();
@@ -16,10 +16,10 @@ class Surveys{
         cy.wait(1000);
     }
     inputServeyName(name){
-        const randomChars = Cypress._.random(1000, 9999);
-        const nameSurvey = 'Survey '+ name + randomChars
-        cy.get(surveysLocator.textfillServeyName).type(nameSurvey);
-        return nameSurvey;
+        // const randomChars = Cypress._.random(1000, 9999);
+        // const nameSurvey = name + randomChars
+        cy.get(surveysLocator.textfillServeyName).type(name);
+
     }
     selectedFolderFramework(folderFramework){
         cy.get(surveysLocator.textfillFramework).click();
@@ -61,7 +61,7 @@ class Surveys{
 
     createServeyName(){
         const randomChars = Cypress._.random(1000, 9999);
-        const nameSurvey = 'Test '+ randomChars;
+        const nameSurvey = 'Surveys Test '+ randomChars;
         this.clickSurveysPage();
         this.clickIconNew();
         this.selectedCreateSurvey();

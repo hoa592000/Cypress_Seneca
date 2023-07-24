@@ -24,7 +24,6 @@ describe('Verify Portfolios', function(){
         portfolios.clickNextButton();
         portfolios.clickResetAvg();
         portfolios.clickConfirm();
-        portfolios.clickPortfoliosPage();
 
     })
     it('Create portfolios with Entity is ' + dataPortfolios.searchEntityName, function(){

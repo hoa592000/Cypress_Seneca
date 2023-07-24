@@ -1,15 +1,5 @@
 const { defineConfig } = require("cypress");
 
-module.exports = defineConfig({
-  e2e: {
-    setupNodeEvents(on, config) {
-      // implement node event listeners here
-    },
-  },
-});
-// const cucumber = require('cypress-cucumber-preprocessor').default
-const { defineConfig } = require("cypress");
-
 // async function setupNodeEvents(on, config){
 //   await preprocessor.addCucumberPreprocessorPlugin(on, config);
       
@@ -17,11 +7,19 @@ const { defineConfig } = require("cypress");
 //   return config;
 // }
 module.exports = defineConfig({
+  reporter: 'cypress-mochawesome-reporter',
+  reporterOptions: {
+    charts: true,
+    reportPageTitle: 'custom-title',
+    embeddedScreenshots: true,
+    inlineAssets: true,
+    saveAllAttempts: false,
+  },
   viewportWidth: 1150,
   viewportHeight: 900,
   e2e: {
     async setupNodeEvents(on, config) {
-      
+      require('cypress-mochawesome-reporter/plugin')(on);
       // on('file:preprocessor', cucumber())
       // implement node event listeners here
       // await preprocessor.addCucumberPreprocessorPlugin(on, config);

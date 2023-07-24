@@ -1,6 +1,6 @@
 // const cucumber = require('cypress-cucumber-preprocessor').default
 const { defineConfig } = require("cypress");
-
+const { beforeRunHook, afterRunHook } = require('cypress-mochawesome-reporter/lib');
 // async function setupNodeEvents(on, config){
 //   await preprocessor.addCucumberPreprocessorPlugin(on, config);
       
@@ -10,14 +10,21 @@ const { defineConfig } = require("cypress");
 module.exports = defineConfig({
   viewportWidth: 1150,
   viewportHeight: 900,
+  reporter: 'cypress-mochawesome-reporter', // for html reporter
   e2e: {
-    async setupNodeEvents(on, config) {
-      
-      // on('file:preprocessor', cucumber())
+    setupNodeEvents(on, config) {
       // implement node event listeners here
-      // await preprocessor.addCucumberPreprocessorPlugin(on, config);
-      
-      // on("file:preprocessor", browserify.default(config));
+      this.screenshotOnRunFailure = true;
+      // require('cypress-mochawesome-reporter/plugin')(on); // for html reporter
+      on('before:run', async (details) => {
+        console.log('override before:run');
+        await beforeRunHook(details);
+      });
+
+      on('after:run', async () => {
+        console.log('override after:run');
+        await afterRunHook();
+      });
 
     },
     // specPattern: "cypress/e2e/Base/*.feature",
