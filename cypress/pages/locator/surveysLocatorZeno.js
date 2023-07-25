@@ -11,8 +11,11 @@ class SurveysLocator{
     selectFolderPortfolio='li.ant-cascader-menu-item.ant-cascader-menu-item-expand';
     selectPortfolio='span.selectable';
     buttonSubmit='button.ant-btn.ant-btn-primary';
-    buttonEdit='tr.ant-table-row.ant-table-row-level-0.row--item>td.ant-table-cell>button[_nk="Akk681"]';
-
+    listSurveyName='.ant-table-row.ant-table-row-level-0.row--item .ant-table-cell.col--name .flexBox >div';
+    buttonEdit='.ant-btn.ant-btn-text.ant-btn-sm.ant-dropdown-trigger';
+    selecteEdit='span.ant-dropdown-menu-title-content';
+    confirmDelete='.ant-btn.ant-btn-default.ant-btn-dangerous';
+    
 }
 const surveysLocator = new SurveysLocator();
 export default surveysLocator;

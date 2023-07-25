@@ -1,4 +1,5 @@
 import frameworkLocator from "./locator/frameworkLocatorZeno"
+import dataFramework from "../fixtures/frameworkZeno.json"
 class Framework{
 
     clickFrameworkPage(){
@@ -102,6 +103,39 @@ class Framework{
     }
     selectedQuestionSupplyChainMgmt(){
         cy.get(frameworkLocator.selectedQuestionSupplyChainMgmt).contains('Supply Chain Mgmt').click();
+    }
+    createFramework(){
+        this.clickIconNew();
+        this.selectedCreateFramework();
+        this.clickEditButton();
+        this.inputNameFramework(dataFramework.nameFrameworkCreate);
+        this.clickAddQuestion();
+        this.clickCustonQuestion();
+        this.inputCode(dataFramework.code);
+        this.inputPillar();
+        this.inputCategory();
+        this.inputIndicator(dataFramework.inputIndicator);
+        this.inputDatatype();
+        this.inputPolarity();
+        this.inputQuestion(dataFramework.inputQuestion);
+        this.clickConfirm();
+        this.clickNextButton();
+        this.clickNextButton();
+        this.clickNextButton();
+    }
+    cloneFramework(){
+        this.clickIconNew();
+        this.selectedCreateFramework();
+        cy.wait(1000);
+        this.clickEditButton();
+        this.inputNameFramework(dataFramework.nameFrameworkClone);
+        this.clickAddQuestion();
+        this.clickSearchButton(dataFramework.searchFramework)
+        this.clickSearch()
+        this.selectedQuestionSupplyChainMgmt()
+        this.clickNextButton();
+        this.clickNextButton();
+        this.clickNextButton(); 
     }
 }
 const framework = new Framework();
