@@ -105,10 +105,11 @@ class Framework{
         cy.get(frameworkLocator.selectedQuestionSupplyChainMgmt).contains('Supply Chain Mgmt').click();
     }
     createFramework(){
+        const nameFramework = dataFramework.nameFrameworkCreate;
         this.clickIconNew();
         this.selectedCreateFramework();
         this.clickEditButton();
-        this.inputNameFramework(dataFramework.nameFrameworkCreate);
+        this.inputNameFramework(nameFramework);
         this.clickAddQuestion();
         this.clickCustonQuestion();
         this.inputCode(dataFramework.code);
@@ -121,7 +122,8 @@ class Framework{
         this.clickConfirm();
         this.clickNextButton();
         this.clickNextButton();
-        this.clickNextButton();
+        this.clickNextButton();                               
+        return nameFramework;
     }
     cloneFramework(){
         this.clickIconNew();
@@ -137,6 +139,28 @@ class Framework{
         this.clickNextButton();
         this.clickNextButton(); 
     }
+    // deleteFramework(){
+    //     const searchName = framework.createFramework();
+    //     console.log("@",searchName);
+    //     let survayName =[];
+    //     let name;
+    //     cy.get(frameworkLocator.listFrameworkName).then(($list)=>{
+    //        for (let j = 0; j < $list.length; j++) {
+    //         name =$list[j].textContent
+    //           survayName.push(name)
+    //               if ($list[j].textContent==searchName) {
+    //                 let indexOfIcon =j
+    //                   cy.log('index:.......',indexOfIcon);
+    //                   cy.get(frameworkLocator.iconEdit).eq(indexOfIcon).click();
+    //                 //   cy.get(surveysLocator.selecteEdit).contains('Delete').click();
+    //                 //   cy.get(surveysLocator.confirmDelete).click();
+    //                   cy.wait(1000);
+    //                   break;
+    //            }
+    //        }
+    // //     })            
+
+    // }
 }
 const framework = new Framework();
 export default framework;

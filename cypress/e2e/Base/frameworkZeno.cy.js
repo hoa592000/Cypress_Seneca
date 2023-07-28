@@ -13,7 +13,12 @@ describe('Verify framework', function(){
         login.clickTeam(dataUserZenoData.TeamZeno);
         login.clickOpen();
     })
-    
+    // it('Create framework with valid values', function(){
+    //     framework.clickFrameworkPage();
+        
+    //     framework.deleteFramework();
+
+    // })
     it('Create framework with valid values', function(){
 
         framework.clickFrameworkPage();
@@ -26,10 +31,6 @@ describe('Verify framework', function(){
         framework.clickFrameworkPage();
 
         framework.cloneFramework();
-    })
-
-    it('', function(){
-
     })
 })
    

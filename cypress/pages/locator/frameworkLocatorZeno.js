@@ -27,6 +27,7 @@ class FrameworkLocator{
     clickSearchButton='input.ant-select-selection-search-input';
     clickSearch='div.ant-cascader-menu-item-content';
     selectedQuestionSupplyChainMgmt='span[_nk="rZhL42"]';
+    listFrameworkName='td.ant-table-cell.col--name';
 }
 const frameworkLocator = new FrameworkLocator();
 export default frameworkLocator;
